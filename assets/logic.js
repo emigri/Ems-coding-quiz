@@ -29,5 +29,3 @@ function startQuestions() {
 
 // event listener that executes function that start the timer and displays the first question
 startButton.addEventListener("click", startQuestions);
-
-//
