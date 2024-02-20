@@ -4,7 +4,15 @@ var choices = document.querySelector("choices");
 
 
 // Questions contain buttons for each answer.
-
+quizQuestions =
+  {
+    question: 'What is an array',
+      choices: '',
+      choices: '',
+      choices: '',
+      choices: '',
+      answer: '',
+  }
 
 // When answer is clicked, the next question appears
 
@@ -13,5 +21,6 @@ var choices = document.querySelector("choices");
 
 
 // The quiz should end when all questions are answered or the timer reaches 0.
+
 
 // When the game ends, it should display their score and give the user the ability to save their initials and their score

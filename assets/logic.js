@@ -2,6 +2,7 @@
 var timerElement = document.querySelector("#time");
 var startScreen = document.querySelector(".start");
 var startButton = document.querySelector("#start");
+var question = document.querySelector('#questions');
 
 var endScreen = document.querySelector("end-screen");
 var submit = document.querySelector(".submit");
@@ -18,10 +19,15 @@ function startTimer() {
   }, 1000);
 }
 
+
 // function that brings up the questions when startButton is clicked
 function startQuestions() {
-  startScreen.textContent = 0
+  startScreen.style.display = 'none';
+  question.style.display = 'block';
+  startTimer()
 }
 
-// create an event listener that executes a function that start the timer
-startButton.addEventListener("click", startTimer, startQuestions);
+// event listener that executes function that start the timer and displays the first question
+startButton.addEventListener("click", startQuestions);
+
+//
