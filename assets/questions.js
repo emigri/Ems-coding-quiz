@@ -1,44 +1,43 @@
 
 var questionTitle = document.querySelector("#question-title");
-var choicesId = document.querySelector("choices");
+var choicesId = document.querySelector("#choices");
 var choicesList = document.querySelectorAll(".choices")
-var choice1 = document.querySelector("#choice1");
-var choice2 = document.querySelector("#choice2");
-var choice3 = document.querySelector("#choice3");
-var choice4 = document.querySelector("#choice4");
 
 // Questions contain buttons for each answer.
 var quizQuestions =
  [{
-  question:'Question-1', 
-  choices: {
-      1: 'First answer',
-      2: 'Second answer',
-      3: 'Third answer',
-      4: 'Fourth answer',
-    },
-  answer: 'a',
+    question:"Question-1", 
+    choices: ["1", "2", "3", "4"],
+    answer: 'a',
   },
   {
-    question:'Question-2', 
-    choices: {
-        1: 'a',
-        2: 'b',
-        3: 'c',
-        4: 'd',
-      },
+    question:"Question-2", 
+    choices: ["1", "2", "3", "4"],
     answer: 'a',
-    }] 
+  },
+  {
+    question:"Question-3", 
+    choices: ["1", "2", "3", "4"],
+    answer: 'a',
+  },
+  {
+    question:"Question-4", 
+    choices: ["1", "2", "3", "4"],
+    answer: 'a',
+  }  
+
+] 
 
 
 // assign question to the html elements
 questionTitle.textContent = quizQuestions[0].question;
-choice1.textContent = quizQuestions[0].choices[1];
-choice2.textContent = quizQuestions[0].choices[2];
-choice3.textContent = quizQuestions[0].choices[3];
-choice4.textContent = quizQuestions[0].choices[4];
+choice1.textContent = quizQuestions[0].choices[0];
+choice2.textContent = quizQuestions[0].choices[1];
+choice3.textContent = quizQuestions[0].choices[2];
+choice4.textContent = quizQuestions[0].choices[3];
 
 // for each question, use the question title and choice from the following index
+
 
 // When answer is clicked, the next question appears
 
