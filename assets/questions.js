@@ -1,40 +1,44 @@
 
 var questionTitle = document.querySelector("#question-title");
-var choicesId = document.querySelector("#choices");
-var choicesList = document.querySelectorAll(".choices")
+var choices = document.querySelector("#choices");
 
 // Questions contain buttons for each answer.
 var quizQuestions =
  [{
     question:"Question-1", 
     choices: ["1", "2", "3", "4"],
-    answer: 'a',
+    answer: '1',
   },
   {
     question:"Question-2", 
-    choices: ["1", "2", "3", "4"],
+    choices: ["a", "b", "c", "d"],
     answer: 'a',
   },
   {
     question:"Question-3", 
-    choices: ["1", "2", "3", "4"],
-    answer: 'a',
+    choices: ["w", "x", "y", "z"],
+    answer: 'z',
   },
   {
     question:"Question-4", 
-    choices: ["1", "2", "3", "4"],
-    answer: 'a',
+    choices: ["10", "9", "8", "7"],
+    answer: '9',
   }  
-
 ] 
 
+var index = 0
 
 // assign question to the html elements
-questionTitle.textContent = quizQuestions[0].question;
-choice1.textContent = quizQuestions[0].choices[0];
-choice2.textContent = quizQuestions[0].choices[1];
-choice3.textContent = quizQuestions[0].choices[2];
-choice4.textContent = quizQuestions[0].choices[3];
+questionTitle.textContent = quizQuestions[index].question;
+
+var questionsList =           
+'<ul>'+
+'<li><button>' + quizQuestions[index].choices[0] + '</button></li>'+
+'<li><button>' + quizQuestions[index].choices[1] + '</button></li>'+
+'<li><button>' + quizQuestions[index].choices[2] + '</button></li>'+
+'<li><button>' + quizQuestions[index].choices[2] + '</button></li>'+
+'</ul>'
+choices.innerHTML = questionsList
 
 // for each question, use the question title and choice from the following index
 

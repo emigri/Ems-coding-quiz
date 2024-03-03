@@ -9,12 +9,12 @@ var submit = document.querySelector(".submit");
 var feedback = document.querySelector(".feedback");
 
 // variables
-var timerCount = 0;
+var timerCount = 60;
 
 // function that starts time when the startButton is clicked
 function startTimer() {
   setInterval(function() {
-    timerCount ++;
+    timerCount --;
     timerElement.textContent = timerCount;
   }, 1000);
 }
