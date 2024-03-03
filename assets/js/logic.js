@@ -84,8 +84,8 @@ function submitScore() {
       score: timerCount,
     }
     savedScores.push(playerScore)
-    // localStorage.clear()
     localStorage.setItem("playerScores", JSON.stringify(savedScores))
+    alert("Score saved")
   } else {
     alert("Please supply your initials")
   }

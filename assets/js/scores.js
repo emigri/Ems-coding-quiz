@@ -11,7 +11,8 @@ function displayScores(){
 }
 
 function clearScores() {
-
+  localStorage.removeItem("playerScores")
+  location.reload()
 }
 
 clearBtn.addEventListener('click', clearScores)
