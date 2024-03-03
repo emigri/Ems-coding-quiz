@@ -1,0 +1,1 @@
+var highscores = document.querySelector('#highscores')
