@@ -77,14 +77,19 @@ function endQuiz(){
 
 function submitScore() {
   var initials = initial.value;
-  var playerScore = {
-    playerInitials: initials,
-    score: timerCount,
+  if (initials !== "") {
+    var savedScores = JSON.parse(localStorage.getItem("playerScores")) || [];
+    var playerScore = {
+      playerInitials: initials,
+      score: timerCount,
+    }
+    savedScores.push(playerScore)
+    // localStorage.clear()
+    localStorage.setItem("playerScores", JSON.stringify(savedScores))
+  } else {
+    alert("Please supply your initials")
   }
-  localStorage.setItem("playerInitial", playerScore)
-  console.log(localStorage)
 }
-
 
 // event listener that executes function that start the timer and displays the first question
 startButton.addEventListener('click', startQuestions);
